@@ -1,0 +1,634 @@
+/* Montserrat import font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+
+
+/* Navigation Bar */
+/* ======================================================================================================= */
+
+/* General Setting dari Website*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+/* General Setting dari Tag Body*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting dari logo*/
+.logo{
+    color: white;
+    height: 60px;
+    max-width: 100%;
+    margin: .5rem;
+    padding-left: 10%;
+}
+
+/* General Setting dari navbar */
+.navbar{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dee0e0;
+    color: rgb(29, 29, 29);
+}
+
+/* Setting dari link di navbar unordered list*/
+.navbar-links ul{
+    margin-right: 20px;
+    padding: 0;
+    display: flex;
+}
+
+/* Agar list tidak ada bulletnya*/
+.navbar-links li{
+    list-style: none;
+}
+
+/* Setting dari hyperlink di unordered list*/
+.navbar-links li a{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+    padding: 1rem;
+    display: block;
+}
+
+/* Setting dari hyperlink di unordered list saat dihover*/
+.navbar-links a:hover{
+    color: #02aeda;
+    transition : all 0.3s ease 0s;
+}
+
+/* Setting dari posisi dropdown menu*/
+.toggle-button{
+    position: absolute;
+    top: 1.75rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+/* Setting dari tampilan drop down menu*/
+.toggle-button .bar{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+}
+
+button{
+    padding-top : 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color : #2ec761;
+    border : none;
+    border-radius : 50px;
+    cursor : pointer;
+    transition : all 0.3s ease 0s;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Posisi Whatsapp agar fixed di kanan bawah*/
+.contact_wa{
+    float: right;
+    position: fixed;
+    right: 1%;
+    bottom: 3%;
+}
+
+/* Tulisan Hubungi Kami*/
+.contact{
+    color: #ffffff;
+    font-size: medium;
+}
+
+/* Button hover di Hubungi Kami*/
+button:hover{
+    background-color : #119e40;
+}
+
+/* Whatsapp logo*/
+.wa{
+    height: 20px;
+    width: 20px;
+    padding-bottom: 0px;
+}
+
+
+/* Setting apabila media yang digunakan di bawah 700px*/
+@media (max-width: 700px){
+    /* Muncul dropdown menu*/
+    .toggle-button{
+        display: flex;
+    }
+
+    /* Agar navigation linksnya hilang*/
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    /* Agar navbar berada di sebelah kiri */
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Posisi dan size unordered list*/
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* Letak unordered list*/
+    .navbar-links li{
+        text-align: center;
+    }
+
+    /* Padding hyperlink di unordered list*/
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+
+    /* berhubungan dengan javascript*/
+    .navbar-links.active{
+        display: flex;
+    }
+}
+
+/* Setting apabila media yang digunakan di bawah 300px*/
+@media screen and (max-width: 300px) {
+    .logo{
+        padding-left: 1%;
+    }
+  }
+
+/* ======================================================================================================= */
+
+
+
+
+/* Tentang Kami */
+/* ======================================================================================================= */
+
+/* Tentang Kami*/
+.Tentang_Kami{
+    text-align: center;
+}
+
+/* Layanan */
+.Layanan{
+    text-align: center;
+}
+
+/* Promo*/
+.Promo{
+    text-align: center;
+}
+
+/* Container untuk text on image background cars*/
+.container{
+    line-height: 0px;
+    max-width: 100%;
+    height: 60vh;
+    width: 100vw;
+    background-image: url(./Cars.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Text on image background cars*/
+.text_on_image{
+    margin-left: 15%;
+    float: center;
+    position: relative;
+    max-width: 60vh;
+    height: 60vh;
+    background:rgb(32, 31, 31);
+    color: white;
+    opacity: 90%;
+    font-family: "Monserrat", sans-serif;
+    padding: 10px;
+}
+
+/* Text on image h2*/
+.text_on_image_h2{
+    font-family : "Montserrat", sans-serif;
+    font-weight : 500;
+    margin-top: 12%;
+}
+
+/* Agar bisa menyesuaikan dengan lebar device 950px*/
+@media screen and (max-width: 950px) {
+    .text_on_image {
+      margin-left: 0px;
+    }
+  }
+
+/* Agar bisa menyesuaikan dengan lebar device 700px*/
+@media screen and (max-width: 700px) {
+    .text_on_image {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
+
+/* Agar bisa menyesuaikan dengan lebar device 300px*/
+@media screen and (max-width: 300px) {
+    .text_on_image {
+      padding: 5px;
+    }
+  }
+/* ======================================================================================================= */
+
+
+
+
+
+/* Layanan */
+/* ======================================================================================================= */
+
+/* Paragraf Lini Bisnis*/
+.Layanan{
+    background-color: rgb(240, 238, 238);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding: 50px;
+    padding-bottom: 0px;
+    max-width: 100%;
+}
+
+/* Box dengan rounded corners di layanan*/
+.box_layanan{
+    padding: 20px;
+    background-color: rgb(240, 238, 238);
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    max-width: 100%;
+    padding-top: 20px;
+    display: block;
+}
+
+/* Kolom Layanan*/
+.column_layanan_isi {
+    float: left;
+    width: 33.33%;
+}
+
+/* Text settings di 6 box layanan*/
+.text_layanan{
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px;
+    padding: 20px;
+    margin: 20px;
+    height: 360px;
+}
+
+/* Image di box layanan*/
+.image_layanan{
+    width: 70%;
+    height: 45%;
+    margin-top: 9px;
+}
+
+/* Agar sisa halaman tidak digunakan konten yang seharusnya di bawahnya*/
+.box_layanan:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 1025px*/
+@media screen and (max-width: 1025px) {
+    .image_layanan{
+        width: 60%;
+        height: 30%;
+    }
+  }
+
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 950px*/
+@media screen and (max-width: 950px) {
+    .image_layanan{
+        width: 50%;
+        height: 50%;
+    }
+    .column_layanan_isi {
+        float: none;
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 700px*/
+@media screen and (max-width: 700px) {
+    .text_layanan {
+      max-height: 430px;
+    }
+    .image_layanan{
+        height: 30%;
+    }
+    .column_layanan_isi {
+        width: 100%;
+      }
+  }
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 550px*/
+@media screen and (max-width: 550px) {
+    .text_layanan {
+        max-height: 400px;
+        margin: 2px;
+    }
+    .image_layanan{
+        height: 45%;
+        width: 60%;
+    }
+  }
+
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 450px*/
+@media screen and (max-width: 450px) {
+    .text_layanan {
+        max-height: 400px;
+        margin: 2px;
+    }
+    .image_layanan{
+        height: 35%;
+        width: 60%;
+    }
+  }
+
+/* Agar bisa menyesuaikan dengan lebar device 300px*/
+@media screen and (max-width: 300px) {
+    .text_layanan{
+        height: 1000px;
+    }
+    .image_layanan{
+        height: 18%;
+        width: 60%;
+    }
+  }
+/* ======================================================================================================= */
+
+
+
+
+
+/* Promo */
+/* ======================================================================================================= */
+
+/* gojekxgrab image */
+.gojekxgrab{
+    float: right;
+    max-width: 100%;
+    
+}
+
+/* Kolom berisi gojekxgrab image*/
+.column_promo_gojekxgrab{
+    float: left;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Kolom ketentuan promo*/
+.column_promo_ketentuan{
+    float: left;
+    width: 30%;
+    margin-top: 0px;
+    box-shadow: 3px 3px 5px;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Untuk menghilangkan sisa kolom*/
+.row_promo:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* background antara promo dan footnote*/
+.bg_promo_footnote{
+    height: 60px;
+    width: 100%;
+    background: rgb(216, 216, 216);
+    text-align: center;
+    padding-top: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.bg_promo_footnote a{
+    text-decoration: none;
+    color: rgb(32, 31, 31);
+    background-color: rgb(182, 181, 181);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.bg_promo_footnote a:hover{
+    transition : all 0.3s ease 0s;
+    background-color: #2ec761;
+}
+
+/* hyperlink di kata 'kami' di promo */
+.promo_kami{
+    color: #0e00d4;
+}
+
+/* hyperlink di kata 'kami' di promo saat dihover*/
+.promo_kami:hover{
+    color: #02aeda;
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 1025px*/
+@media screen and (max-width: 1025px) {
+    .column_promo_ketentuan{
+        width: 40%;
+        padding-right: 10px;
+    }
+  }
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 950px*/
+@media screen and (max-width: 950px) {
+    .column_promo_ketentuan{
+        width: 45%;
+        padding-right: 10px;
+    }
+  }
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 700px*/
+@media screen and (max-width: 700px) {
+    .column_promo_gojekxgrab {
+      width: 100%;
+    }
+    .column_promo_ketentuan {
+        width: 95%;
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 950px*/
+@media screen and (max-width: 450px) {
+    .column_promo_ketentuan{
+        width: 95%;
+        padding-right: 10px;
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+/* ======================================================================================================= */
+
+
+/* Footnote */
+/* ======================================================================================================= */
+
+/* Agar sisa baris tidak diambil konten yang seharusnya di bawahnya*/
+.row_foot:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Kolom footnote */
+.column_foot{
+    background-color: rgb(32, 31, 31);
+    color: white;
+    float: left;
+    width: 33.33%;
+    height: 500px;
+    padding: 30px
+}
+
+/* Tulisan-tulisan di footnote*/ 
+.column_foot_content{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Tampilan Google Maps */
+.maps{
+    color: white;
+    background-color: rgb(32, 31, 31);
+    padding: 20px;
+    float: left;
+    max-width: 100%;
+}
+
+/* Icon Contact di Hubungi Kami*/
+.contact_icon{
+    padding-top: 10px;
+    height: 50px;
+    width: 40px;
+}
+
+/* Icon Office di Kantor Pusat*/
+.office_icon{
+    height: 50px;
+    width: 50px;
+}
+
+/* Icon Time di Jam Operasional*/
+.time_icon{
+    padding-top: 10px;
+    height: 50px;
+    width: 40px;
+}
+
+/* Icon Email di Email*/
+.email_icon{
+    height: 50px;
+    width: 50px;
+}
+
+/* Horizontal line yang membatasi footnote dengan copyright*/
+.hr_copyright{
+    color: white;
+}
+
+/* Settings tulisan copyright*/
+.copyright{
+    text-align: center;
+    background-color: rgb(32,31,31);
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: x-small;
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 950px*/
+@media screen and (max-width: 950px) {
+    .column_foot {
+      width: 100%;
+    }
+    .copyright{
+        width: 100%;
+    }
+  }
+
+/* ======================================================================================================= */
+
+
+hr{
+    color : #fa0707;
+}
+
+br{
+    margin : 50px 0;
+}
+
+h1{
+    font-family: "Montserrat", sans-serif;
+}
+
+h2{
+    font-family: "Montserrat", sans-serif;
+}
+
+.par{
+    padding-left: 50px;
+    font-family : "Montserrat", sans-serif;
+    font-weight : 500;
+    font-size : 16px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.ord_list{
+    padding-left: 100px;
+    font-family : "Montserrat", sans-serif;
+    font-weight : 500;
+    font-size : 16px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+li{
+    padding-left: 10px;
+}

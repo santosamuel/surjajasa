@@ -1,0 +1,922 @@
+/* Montserrat import font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+
+
+/* Navigation Bar */
+/* ======================================================================================================= */
+
+/* General Setting dari Website*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+/* General Setting dari Tag Body*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting dari logo*/
+.logo{
+    color: white;
+    height: 60px;
+    max-width: 100%;
+    margin: .5rem;
+    padding-left: 10%;
+}
+
+/* General Setting dari navbar */
+.navbar{
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(29, 29, 29);
+    margin-right: 70px;
+}
+
+/* Setting dari link di navbar unordered list*/
+.navbar-links ul{
+    text-align: center;
+    padding: 0;
+    display: flex;
+}
+
+/* Agar list tidak ada bulletnya*/
+.navbar-links li{
+    list-style: none;
+}
+
+/* Setting dari hyperlink di unordered list*/
+.navbar-links li a{
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+    padding: 2rem;
+    display: block;
+}
+
+/* Setting dari hyperlink di unordered list saat dihover*/
+.navbar-links a:hover{
+    color: rgba(175, 95, 38, 1);
+    transition : all 0.3s ease 0s;
+}
+
+/* Setting dari posisi dropdown menu*/
+.toggle-button{
+    position: absolute;
+    top: 1.75rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+/* Setting dari tampilan drop down menu*/
+.toggle-button .bar{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+}
+
+button{
+    padding-top : 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border : none;
+    cursor : pointer;
+    transition : all 0.3s ease 0s;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+}
+
+
+/* Setting apabila media yang digunakan di bawah 1025px*/
+@media (max-width: 1025px){
+    /* Muncul dropdown menu*/
+    .toggle-button{
+        display: flex;
+    }
+
+    /* Agar navigation linksnya hilang*/
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    /* Agar navbar berada di sebelah kiri */
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Posisi dan size unordered list*/
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* Letak unordered list*/
+    .navbar-links li{
+        text-align: center;
+    }
+
+    /* Padding hyperlink di unordered list*/
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+
+    /* berhubungan dengan javascript*/
+    .navbar-links.active{
+        display: flex;
+    }
+
+    .logo{
+        margin: .15rem;
+    }
+}
+
+/* Setting apabila media yang digunakan di bawah 700px*/
+@media screen and (max-width: 700px) {
+    .logo{
+        padding-left: 4%;
+    }
+  }
+
+/* Setting apabila media yang digunakan di bawah 300px*/
+@media screen and (max-width: 300px) {
+    .logo{
+        padding-left: 1%;
+    }
+  }
+
+/* ======================================================================================================= */
+
+
+
+
+
+
+/* Beranda*/
+/* ======================================================================================================= */
+
+
+/* Setting div dengan id Beranda*/
+#Beranda{
+    display: flex;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
+/* Membuat column di beranda*/
+.column_beranda{
+    flex: 50%;
+}
+
+/* Setting beranda div atas*/
+.beranda_top{
+    line-height: 1.6;
+    font-size: xx-large;
+    text-shadow: 1.5px 0 #040404;
+    font-weight: 950;
+}
+
+/* Setting beranda div bawah*/
+.beranda_bottom{
+    padding-top: 5%;
+    line-height: 1.6;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+/* Button kontak dan about*/
+.button_kontak_about{
+    margin-top: 7%;
+}
+
+/* Button Hubungi Kami*/
+.kontak{
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 20px;
+    margin-top: 1em;
+    font-size: x-large;
+    padding: 2%;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hubungi Kami saat dihover*/
+.kontak:hover{
+    background-color: rgba(175, 95, 38, 1);
+    color: #ffffff;
+}
+
+/* Button Tentang Kami*/
+.about{
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    margin-top: 1em;
+    font-size: x-large;
+    padding: 2%;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Tentang Kami saat dihover*/
+.about:hover{
+    background-color: rgba(175, 95, 38, 1);
+    color: #ffffff;
+}
+
+/* Image amico di beranda*/
+.amico{
+    float: right;
+    max-width: 80%;
+}
+
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 1050px*/
+@media screen and (max-width: 1050px) {
+    #Beranda{
+        display: flex;
+        width: 100%;
+        padding: 5%;
+    }
+
+    .beranda_top{
+        font-size: x-large;
+    }
+
+    .beranda_bottom{
+        font-size: large;
+    }
+
+    .kontak{
+        font-size: large;
+    }
+
+    .about{
+        font-size: large;
+    }
+
+    .amico{
+        max-width: 80%;
+        height: auto;
+    }
+
+    .column_beranda{
+        flex: 50%;
+    }
+  }
+
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 785px*/
+@media screen and (max-width: 785px) {
+    #Beranda{
+        display: block;
+        width: 100%;
+        padding: 5%;
+    }
+
+    .beranda_top{
+        font-size: x-large;
+    }
+
+    .beranda_bottom{
+        font-size: large;
+    }
+
+    .kontak{
+        font-size: large;
+    }
+
+    .about{
+        font-size: large;
+    }
+
+    .amico{
+        width: 0%;
+        height: 0%;
+    }
+  }
+
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 700px*/
+@media screen and (max-width: 700px) {
+    #Beranda{
+        display: block;
+        width: 100%;
+        padding: 5%;
+    }
+
+    .beranda_top{
+        font-size: x-large;
+    }
+
+    .beranda_bottom{
+        font-size: large;
+    }
+
+    .kontak{
+        font-size: large;
+    }
+
+    .about{
+        font-size: large;
+    }
+
+    .amico{
+        width: 0%;
+        height: 0%;
+    }
+
+    .column_beranda{
+        flex: 100%;
+    }
+  }
+
+/* ======================================================================================================= */
+
+
+
+
+
+/* Layanan Kami*/
+/* ======================================================================================================= */
+
+/* Mengatur font di bagian Layanan Kami*/
+#Layanan{
+    margin-top: 7%;
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    background-color: rgba(251, 241, 234, 1);
+    ;
+}
+
+/* Tulisan layanan kami yang berwarna ungu*/
+.layanan_kami_ungu{
+    padding-top: 5%;
+    text-align: center;
+    color: rgba(148, 39, 234, 1);
+    font-size: larger;
+    font-weight: 900;
+}
+
+/* Masalah kamu, kami solusikan*/
+.masalah_solusi{
+    margin-top: 2%;
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: 1.5px 0 #040404;
+    font-weight: 950;
+    text-shadow: 5px #888888;
+    line-height: 1.6;
+}
+
+/* Bagian column layanan*/
+.row_layanan{
+    padding: 10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    background-color: rgba(251, 241, 234, 1);
+}
+
+/* Agar sisa baris tidak diambil konten berikutnya*/
+.row_layanan::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Konten column layanan*/
+.column_layanan{
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    float: left;
+    width: 30%;
+    padding: 2%;
+    margin-left: 3%;
+    margin-right: 0px;
+    margin-bottom: 3%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+}
+
+/* Setting unordered list*/
+.column_layanan ul{
+    font-weight: 900;
+    font-size: large;
+}
+
+/* Setting bullet di unordered list*/
+.column_layanan li{
+    margin-left: 10%;
+    font-size: large;
+    font-weight: normal;
+}
+
+/* setting jenis layanan*/
+.jenis_layanan{
+    margin-bottom: 7%;
+    font-weight: 900;
+    font-size: x-large;
+    text-align: center;
+}
+
+/* image di layanan*/
+.image_layanan{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 45%;
+}
+
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 1150px*/
+@media screen and (max-width: 1150px) {
+    .column_layanan{
+        width: 40%;
+        padding: 2%;
+        margin: 4%;
+    }
+
+    .row_layanan{
+        padding: 8%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 750px*/
+@media screen and (max-width: 750px) {
+    .column_layanan{
+        width: 100%;
+        padding: 5%;
+        margin: 4%;
+        min-height: 200px;
+    }
+
+    .row_layanan{
+        padding: 20%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+
+    .masalah_solusi{
+        font-size: x-large;
+    }
+
+    .jenis_layanan{
+        font-size: large;
+    }
+
+    .column_layanan ul{
+        font-size: medium;
+    }
+
+    .column_layanan li{
+        font-size: medium;
+    }
+
+    .image_layanan{
+        max-width: 30%;
+    }
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 400px*/
+@media screen and (max-width: 400px) {
+    .column_layanan{
+        width: 100%;
+        padding: 5%;
+        margin: 4%;
+        min-height: 200px;
+    }
+
+    .row_layanan{
+        padding: 20%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+
+    .image_layanan{
+        width: 50%;
+        height: auto;
+    }
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 400px*/
+@media screen and (max-width: 320px) {
+    .column_layanan ul{
+        font-size: small;
+    }
+    
+    .column_layanan li{
+        font-size: small;
+    }
+}
+
+
+
+/* Potongan Harga*/
+/* ======================================================================================================= */
+
+
+/* setting umum bagian potongan harga */
+#Potongan_Harga{
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    background-color: rgba(255, 217, 190, 1);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* setting header potongan harga*/
+.header_potongan_harga{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: xx-large;
+    text-shadow: 1.5px 0 #040404;
+    font-weight: 950;
+    line-height: 1.6;
+}
+
+/* body potongan harga */
+.body_potongan_harga{
+    background-color: white;
+    color: rgb(82, 80, 80);
+    margin-left: 28%;
+    margin-right: 28%;
+    margin-top: 2%;
+    padding: 2%;
+    padding-top: 3%;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 900;
+    border-width: thin;
+    border-radius: 15px;
+}
+
+/* button di body potongan harga*/
+.claim_promo{
+    position: relative;
+    background-color: rgba(175, 95, 38, 1);
+    color: white;
+    font-size: x-large;
+    margin-top: 3%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* button claim promo kalau dihover*/
+.claim_promo:hover{
+    background-color: #823603;
+}
+
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 1200px*/
+@media screen and (max-width: 1200px) {
+    .header_potongan_harga{
+        font-size: x-large;
+    }
+
+    .body_potongan_harga{
+        font-size: large;
+    }
+
+    .claim_promo{
+        font-size: large;
+    }
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 750px*/
+@media screen and (max-width: 750px) {
+    .header_potongan_harga{
+        font-size: x-large;
+    }
+
+    .body_potongan_harga{
+        font-size: medium;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .claim_promo{
+        font-size: medium;
+    }
+}
+/* ======================================================================================================= */
+
+
+
+
+/* Prosedur Kami*/
+/* ======================================================================================================= */
+
+/* Setting umum section prosedur */
+#Prosedur{
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    padding-top: 5%;
+    background-color: rgba(251, 241, 234, 1);
+
+}
+
+/* Setting tulisan ungu prosedur kami*/
+.prosedur_kami_ungu{
+    text-align: center;
+    font-size: larger;
+    color: rgba(148, 39, 234, 1);
+    font-weight: bold;
+}
+
+.row_langkah_prosedur{
+    padding: 8%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+/* Agar sisa baris tidak diambil konten berikutnya*/
+.row_langkah_prosedur::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Column dari prosedur*/
+.column_langkah_prosedur{
+    float: left;
+    width: 23%;
+    border-radius: 20px;
+    border-color: #dee0e0;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+    min-height: 230px;
+    margin: 1%;
+    background-color: #f9fafa;
+}
+
+/* Header dari langkah-langkah di prosedur*/
+.header_column_langkah_prosedur{
+    font-size: x-large;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 15%;
+}
+
+/* Body dari langkah-langkah di prosedur*/
+.isi_column_langkah_prosedur{
+    text-align: center;
+    font-size: large;
+    font-weight: 900;
+    padding: 10%;
+}
+
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 1200px*/
+@media screen and (max-width: 1200px) {
+    .header_column_langkah_prosedur{
+        font-size: large;
+    }
+
+    .column_langkah_prosedur{
+        min-height: 230px;
+    }
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 920px*/
+@media screen and (max-width: 920px) {
+    .row_langkah_prosedur{
+        padding: 10%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    .column_langkah_prosedur{
+        width: 40%;
+        margin: 5%;
+        max-height: 200px;
+    }
+
+    .isi_column_langkah_prosedur{
+        font-size: medium;
+    }
+
+    .prosedur_kami_ungu{
+        font-size: large;
+    }
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 600px*/
+@media screen and (max-width: 600px) {
+    .row_langkah_prosedur{
+        padding: 15%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    .column_langkah_prosedur{
+        width: 100%;
+        min-height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header_column_langkah_prosedur{
+        padding-top: 5%;
+    }
+
+    .isi_column_langkah_prosedur{
+        padding: 5%;
+    }
+
+    .masalah_solusi{
+        padding: 3%;
+    }
+}
+
+/* ======================================================================================================= */
+
+
+
+
+
+/* Hubungi Kami */
+/* ======================================================================================================= */
+
+/* General setting di section hubungi kami*/
+#Hubungi_Kami{
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 5%;
+    height: auto;
+    margin-bottom: 5%;
+}
+
+/* Tulisan Hubungi Kami warna ungu*/
+.hubungi_kami_ungu{
+    text-align: center;
+    font-size: larger;
+    color: rgba(148, 39, 234, 1);
+    font-weight: bold;
+}
+
+/* Tulisan ingin tahu lebih lanjut*/
+.header_hubungi{
+    margin-top: 2%;
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: 1.5px 0 #040404;
+    font-weight: 950;
+    line-height: 1.6;
+}
+
+/* Tulisan silahkan hubungi lebih lanjut*/
+.header_hubungi_2{
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-size: large;
+}
+
+/* Whatsapp logo*/
+.wa_hubungi_kami{
+    height: 30%;
+    width: 30%;
+    padding-right: 10px;
+    vertical-align: text-bottom;
+}
+
+/* Tulisan whatsapp*/
+.tulisan_wa{
+    font-weight: 950;
+    text-shadow: 1px 0 #040404;
+}
+
+/* Tombol hubungi kami*/
+.button_hubungi_kami{
+    background-color: rgba(251, 241, 234, 1);
+    margin-top: 2%;
+    padding: 2%;
+    border-radius: 20px;
+    font-size: x-large;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+    font-weight: 900;
+}
+
+/* Button jika dihover*/
+.button_hubungi_kami:hover{
+    background-color: rgb(233, 185, 153);
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 1000px*/
+@media screen and (max-width: 1000px) {
+    .header_hubungi{
+        font-size: x-large;
+    }
+
+    .button_hubungi_kami{
+        font-size: large;
+    }
+
+    .header_hubungi_2{
+        font-size: medium;
+    }
+
+    .hubungi_kami_ungu{
+        font-size: large;
+    }
+
+    .button_hubungi_kami{
+        padding: 3%;
+    }
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 700px*/
+@media screen and (max-width: 700px) {
+    .header_hubungi{
+        margin-top: 5%;
+    }
+
+    .header_hubungi_2{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+/* ======================================================================================================= */
+
+
+
+
+
+/* Footnote*/
+/* ======================================================================================================= */
+
+/* General setting dari footnote*/
+#footnote{
+    font-family: "Poppins";
+    letter-spacing: 1px;
+    background-color: rgba(175, 95, 38, 1);
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+}
+
+/* Tulisan surja jasa*/
+.footnote_surja_jasa{
+    font-size: large;
+}
+
+/* Tulisan alamat*/
+.alamat{
+    padding-top: 1%;
+    font-size: large;
+    padding-bottom: 1%;
+}
+
+/* Copyright*/
+.copyright{
+    background-color: rgba(255, 217, 190, 1);
+    color: black;
+}
+
+/* Agar bisa menyesuaikan dengan lebar mobile phone 1000px*/
+@media screen and (max-width: 700px) {
+    .alamat{
+        font-size: small;
+    }
+
+    .footnote_surja_jasa{
+        font-size: medium;
+    }
+
+    .copyright{
+        font-size: x-small;
+    }
+}
+
+/* Copyright*/
+
+/* ======================================================================================================= */
